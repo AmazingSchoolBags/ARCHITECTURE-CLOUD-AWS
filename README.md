@@ -1,23 +1,24 @@
 # Architecture Cloud AWS - Projet E-commerce & Sécurité ☁️
 
-## 📝 Présentation
-Déploiement d'une infrastructure cloud complète sur AWS pour un client e-commerce, intégrant une approche DevSecOps.
+## 🎯 Présentation du projet
+Ce projet consiste en la conception et le déploiement d'une infrastructure cloud complète sur AWS pour un client du secteur e-commerce. L'objectif était de fournir un environnement hautement disponible, automatisé et sécurisé en suivant une méthodologie **DevSecOps**.
 
-**Résultats de l'évaluation :** - **Écrit : 17/20**
-- **Oral : 18/20**
+**Résultats de l'évaluation :**
+* **Note Écrit :** 17/20 
+* **Note Oral :** 18/20
 
 ## 🚀 Réalisations Techniques
-- **MVP E-commerce :** Stack Django (paiement Stripe) et WordPress sur EC2.
-- [cite_start]**Base de données :** RDS MySQL avec **Haute Disponibilité (Multi-AZ)**[cite: 1993, 1995].
-- [cite_start]**Sécurité Réseau :** Isolation via VPC distincts et interconnexion par **VPC Peering**[cite: 2366, 2642].
-- [cite_start]**Monitoring :** Surveillance active avec **Uptime Kuma**[cite: 3044, 3076].
-- [cite_start]**Automation :** Scripts Bash pour sauvegardes automatisées vers **Amazon S3**[cite: 2213, 2214].
+* **Infrastructure MVP :** Déploiement d'une application Django (avec passerelle Stripe) et d'une stack WordPress sur instances EC2.
+* **Haute Disponibilité :** Base de données **Amazon RDS MySQL** configurée en **Multi-AZ** pour garantir la continuité de service.
+* **Sécurité & Isolation :** Création de VPC distincts pour les équipes IA et Cybersécurité, interconnectés via **VPC Peering**.
+* **Automation :** Scripts Bash personnalisés pour la sauvegarde automatique des données vers **Amazon S3** via AWS CLI.
+* **Monitoring :** Surveillance active de la disponibilité des services avec le framework **Uptime Kuma**.
 
-## 🏗️ Architecture
-L'infrastructure repose sur une segmentation stricte :
-- [cite_start]**VPC Cybersécurité** (10.5.0.0/16) [cite: 2424, 2425]
-- [cite_start]**VPC IA** (10.4.0.0/16) [cite: 2641]
+## 🏗️ Architecture Réseau
+L'infrastructure repose sur une segmentation réseau stricte pour maximiser la sécurité :
+* **VPC Principal (MVP) :** 10.0.0.0/16.
+* **VPC IA :** 10.4.0.0/16.
+* **VPC Cybersécurité :** 10.5.0.0/16.
 
 ## 📂 Structure du dépôt
-- `/docs` : Contient le rapport technique complet (31 pages).
-- `/scripts` : Scripts d'automatisation et de sauvegarde.
+* `/docs
